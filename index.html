@@ -2,22 +2,43 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Dirir Ibrahim | Software Engineer</title>
-  <meta name="description" content="Portfolio of Dirir Ibrahim - Software engineer focused on backend infrastructure, concurrency, and full-stack systems.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
-  
+  <meta name="description" content="Dirir Ibrahim — Software Engineer and Computer Science student in Ottawa, Ontario, focused on backend engineering, concurrency, and resilient systems.">
+  <meta name="author" content="Dirir Ibrahim">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#09090b">
+  <link rel="canonical" href="https://imdirir.com/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%200%20100%20100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dirir Ibrahim | Software Engineer">
+  <meta property="og:description" content="Software Engineer and Computer Science student in Ottawa, Ontario, focused on backend engineering, concurrency, and resilient systems.">
+  <meta property="og:url" content="https://imdirir.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="imdirir.com">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:image" content="https://imdirir.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dirir Ibrahim | Software Engineer">
+  <meta name="twitter:description" content="Software Engineer and Computer Science student in Ottawa, Ontario, focused on backend engineering, concurrency, and resilient systems.">
+  <meta name="twitter:image" content="https://imdirir.com/og-image.png">
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <script>
-    tailwind.config = {
+    if (window.tailwind) tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
@@ -37,52 +58,108 @@
       }
     }
   </script>
-  <meta property="og:title" content="Dirir Ibrahim | Software Engineer">
-  <meta property="og:description" content="Portfolio of Dirir Ibrahim — Systems, backend tooling, and modern web applications.">
-  <meta property="og:url" content="https://imdirir.com">
-  <meta property="og:type" content="website">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dirir Ibrahim",
+    "alternateName": "Dirir Ahmed Ibrahim",
+    "url": "https://imdirir.com/",
+    "image": "https://imdirir.com/og-image.png",
+    "jobTitle": "Software Engineer",
+    "email": "mailto:dirir.ahmedd@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ottawa",
+      "addressRegion": "ON",
+      "addressCountry": "CA"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Ottawa"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Senate of Canada"
+    },
+    "sameAs": [
+      "https://github.com/dirirahmed",
+      "https://www.linkedin.com/in/dirir-a-ibrahim-a37032306/"
+    ],
+    "knowsAbout": ["Backend Engineering", "Concurrency", "Distributed Systems", "Go", "Python", "SQL", "REST APIs", "Linux"]
+  }
+  </script>
 </head>
 
 <body class="bg-[#09090b] text-zinc-300 font-sans antialiased selection:bg-emerald-500/20 selection:text-emerald-300 min-h-screen flex flex-col justify-between">
 
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:px-4 focus:py-2 focus:rounded-lg focus:bg-zinc-100 focus:text-zinc-950 focus:text-sm focus:font-medium">
+    Skip to content
+  </a>
+
   <!-- Floating Toast Notification -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-16 opacity-0 transition-all duration-300 pointer-events-none bg-zinc-800 text-zinc-100 px-4 py-2.5 rounded-lg border border-zinc-700 shadow-xl flex items-center space-x-2 text-sm font-medium">
+  <div id="toast" role="status" aria-live="polite" class="fixed bottom-6 right-6 z-[60] transform translate-y-16 opacity-0 transition-all duration-300 pointer-events-none bg-zinc-800 text-zinc-100 px-4 py-2.5 rounded-lg border border-zinc-700 shadow-xl flex items-center space-x-2 text-sm font-medium">
     <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
-    <span>Email copied to clipboard!</span>
+    <span id="toast-message">Email copied to clipboard!</span>
   </div>
 
   <!-- Navigation -->
-  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#09090b]/80 border-b border-zinc-800/80">
+  <header class="sticky top-0 z-50 w-full backdrop-blur-md bg-[#09090b]/80 border-b border-zinc-800/80">
     <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
       <a href="#" class="font-mono text-sm tracking-wider font-semibold text-zinc-100 hover:text-emerald-400 transition-colors">
         imdirir<span class="text-emerald-400">.com</span>
       </a>
 
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-zinc-400">
+      <nav aria-label="Primary" class="hidden md:flex items-center space-x-8 text-sm font-medium text-zinc-400">
         <a href="#about" class="hover:text-zinc-100 transition-colors">About</a>
         <a href="#projects" class="hover:text-zinc-100 transition-colors">Projects</a>
+        <a href="#experience" class="hover:text-zinc-100 transition-colors">Experience</a>
         <a href="#skills" class="hover:text-zinc-100 transition-colors">Skills</a>
         <a href="#contact" class="hover:text-zinc-100 transition-colors">Contact</a>
       </nav>
 
-      <div class="flex items-center space-x-3">
-        <a href="https://github.com/dirirahmed" target="_blank" rel="noopener noreferrer" class="p-2 rounded-md hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 transition-colors" aria-label="GitHub Profile">
+      <div class="flex items-center space-x-1">
+        <a href="https://github.com/dirirahmed" target="_blank" rel="noopener noreferrer" class="p-2 rounded-md hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 transition-colors" aria-label="GitHub profile (opens in a new tab)">
           <i data-lucide="github" class="w-4 h-4"></i>
         </a>
-        <a href="mailto:dirir.ahmedd@gmail.com" class="p-2 rounded-md hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 transition-colors" aria-label="Email">
+        <a href="https://www.linkedin.com/in/dirir-a-ibrahim-a37032306/" target="_blank" rel="noopener noreferrer" class="p-2 rounded-md hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 transition-colors" aria-label="LinkedIn profile (opens in a new tab)">
+          <i data-lucide="linkedin" class="w-4 h-4"></i>
+        </a>
+        <a href="mailto:dirir.ahmedd@gmail.com" class="p-2 rounded-md hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 transition-colors" aria-label="Send an email to dirir.ahmedd@gmail.com">
           <i data-lucide="mail" class="w-4 h-4"></i>
         </a>
+
+        <button id="menu-toggle" type="button" class="md:hidden ml-1 p-2 rounded-md hover:bg-zinc-800 text-zinc-300 transition-colors" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <i data-lucide="menu" id="menu-icon" class="w-5 h-5"></i>
+          <i data-lucide="x" id="close-icon" class="w-5 h-5 hidden"></i>
+        </button>
       </div>
     </div>
+
+    <!-- Mobile menu -->
+    <nav id="mobile-menu" aria-label="Mobile" class="hidden md:hidden border-t border-zinc-800/80 bg-[#09090b]/95 backdrop-blur-md">
+      <div class="max-w-5xl mx-auto px-6 py-4 flex flex-col space-y-1 text-sm font-medium text-zinc-400">
+        <a href="#about" class="px-2 py-2.5 rounded-md hover:bg-zinc-900 hover:text-zinc-100 transition-colors">About</a>
+        <a href="#projects" class="px-2 py-2.5 rounded-md hover:bg-zinc-900 hover:text-zinc-100 transition-colors">Projects</a>
+        <a href="#experience" class="px-2 py-2.5 rounded-md hover:bg-zinc-900 hover:text-zinc-100 transition-colors">Experience</a>
+        <a href="#skills" class="px-2 py-2.5 rounded-md hover:bg-zinc-900 hover:text-zinc-100 transition-colors">Skills</a>
+        <a href="#contact" class="px-2 py-2.5 rounded-md hover:bg-zinc-900 hover:text-zinc-100 transition-colors">Contact</a>
+      </div>
+    </nav>
   </header>
 
-  <main class="max-w-5xl mx-auto px-6 py-16 sm:py-24 space-y-28 flex-1">
+  <main id="main" class="max-w-5xl mx-auto px-6 py-16 sm:py-24 space-y-28 flex-1 w-full">
 
     <!-- Hero Section -->
-    <section id="about" class="space-y-6 pt-4">
+    <section id="about" class="space-y-6 pt-4 scroll-mt-24">
       <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-emerald-500/20 bg-emerald-500/10 text-emerald-400 text-xs font-mono font-medium tracking-wide">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>Available for new opportunities</span>
+        <span class="relative flex w-2 h-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full w-2 h-2 bg-emerald-400"></span>
+        </span>
+        <span>Available for software engineering roles</span>
       </div>
 
       <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-100 leading-tight">
@@ -90,14 +167,18 @@
       </h1>
 
       <p class="text-lg sm:text-xl text-zinc-400 max-w-2xl leading-relaxed font-normal">
-        Computer Science student and developer based in Ottawa, Canada. Focused on backend services, concurrency patterns, and building resilient software systems.
+        Software Engineer &amp; Computer Science student based in Ottawa, Ontario. I build backend services and systems tooling, with a focus on concurrency, correctness, and resilient infrastructure under real-world failure conditions.
       </p>
 
       <div class="pt-2 flex flex-wrap items-center gap-3">
         <a href="#projects" class="px-4 py-2 rounded-lg bg-zinc-100 hover:bg-white text-zinc-950 font-medium text-sm transition-colors">
           View Projects
         </a>
-        <button onclick="copyEmail('dirir.ahmedd@gmail.com')" class="px-4 py-2 rounded-lg bg-zinc-800/80 hover:bg-zinc-800 text-zinc-300 font-medium text-sm border border-zinc-700 transition-all flex items-center space-x-2">
+        <a href="./resume.pdf" download class="px-4 py-2 rounded-lg bg-zinc-800/80 hover:bg-zinc-800 text-zinc-300 font-medium text-sm border border-zinc-700 transition-all flex items-center space-x-2">
+          <i data-lucide="download" class="w-3.5 h-3.5 text-zinc-400"></i>
+          <span>Download Resume</span>
+        </a>
+        <button id="copy-email-btn" type="button" onclick="copyEmail('dirir.ahmedd@gmail.com')" class="px-4 py-2 rounded-lg bg-zinc-800/80 hover:bg-zinc-800 text-zinc-300 font-medium text-sm border border-zinc-700 transition-all flex items-center space-x-2">
           <i data-lucide="copy" class="w-3.5 h-3.5 text-zinc-400"></i>
           <span>Copy Email</span>
         </button>
@@ -108,18 +189,34 @@
     <section id="projects" class="space-y-8 scroll-mt-24">
       <div class="space-y-1">
         <h2 class="text-2xl font-semibold tracking-tight text-zinc-100">Featured Projects</h2>
-        <p class="text-sm text-zinc-400">Selected work spanning system tooling, full-stack APIs, and data architecture.</p>
+        <p class="text-sm text-zinc-400">Selected work spanning system tooling, full-stack applications, and infrastructure.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Filter Bar -->
+      <div id="project-filters" role="group" aria-label="Filter projects by category" class="flex flex-wrap items-center gap-2">
+        <button type="button" data-filter="all" aria-pressed="true" class="filter-btn px-3 py-1.5 rounded-full text-xs font-mono font-medium border transition-colors bg-zinc-100 text-zinc-950 border-zinc-100">
+          All
+        </button>
+        <button type="button" data-filter="systems" aria-pressed="false" class="filter-btn px-3 py-1.5 rounded-full text-xs font-mono font-medium border transition-colors bg-zinc-900/60 text-zinc-400 border-zinc-800 hover:border-zinc-700 hover:text-zinc-200">
+          Systems/Backend
+        </button>
+        <button type="button" data-filter="fullstack" aria-pressed="false" class="filter-btn px-3 py-1.5 rounded-full text-xs font-mono font-medium border transition-colors bg-zinc-900/60 text-zinc-400 border-zinc-800 hover:border-zinc-700 hover:text-zinc-200">
+          Full-Stack
+        </button>
+        <button type="button" data-filter="infra" aria-pressed="false" class="filter-btn px-3 py-1.5 rounded-full text-xs font-mono font-medium border transition-colors bg-zinc-900/60 text-zinc-400 border-zinc-800 hover:border-zinc-700 hover:text-zinc-200">
+          Infrastructure
+        </button>
+      </div>
+
+      <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
         <!-- Project 1 -->
-        <article class="p-6 rounded-xl border border-zinc-800/80 bg-zinc-900/40 hover:border-zinc-700 transition-all flex flex-col justify-between group">
+        <article data-category="systems" class="project-card p-6 rounded-xl border border-zinc-800/80 bg-zinc-900/40 hover:border-zinc-700 hover:-translate-y-0.5 hover:shadow-[0_0_40px_-15px_rgba(16,185,129,0.25)] transition-all duration-300 flex flex-col justify-between group">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <span class="text-xs font-mono text-emerald-400 font-medium">Go / Systems</span>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-zinc-500 group-hover:text-zinc-200 transition-colors">
-                <i data-lucide="external-link" class="w-4 h-4"></i>
+              <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-mono text-emerald-400 font-medium">Go / Systems</span>
+              <a href="https://github.com/dirirahmed" target="_blank" rel="noopener noreferrer" class="text-zinc-500 group-hover:text-zinc-200 transition-colors" aria-label="View Go-Janitor CLI source on GitHub (opens in a new tab)">
+                <i data-lucide="github" class="w-4 h-4"></i>
               </a>
             </div>
             <h3 class="text-lg font-semibold text-zinc-100">Go-Janitor CLI</h3>
@@ -135,12 +232,12 @@
         </article>
 
         <!-- Project 2 -->
-        <article class="p-6 rounded-xl border border-zinc-800/80 bg-zinc-900/40 hover:border-zinc-700 transition-all flex flex-col justify-between group">
+        <article data-category="fullstack" class="project-card p-6 rounded-xl border border-zinc-800/80 bg-zinc-900/40 hover:border-zinc-700 hover:-translate-y-0.5 hover:shadow-[0_0_40px_-15px_rgba(16,185,129,0.25)] transition-all duration-300 flex flex-col justify-between group">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <span class="text-xs font-mono text-emerald-400 font-medium">Python / Full-Stack</span>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-zinc-500 group-hover:text-zinc-200 transition-colors">
-                <i data-lucide="external-link" class="w-4 h-4"></i>
+              <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-mono text-emerald-400 font-medium">Python / Full-Stack</span>
+              <a href="https://github.com/dirirahmed" target="_blank" rel="noopener noreferrer" class="text-zinc-500 group-hover:text-zinc-200 transition-colors" aria-label="View QA Audit Tracker source on GitHub (opens in a new tab)">
+                <i data-lucide="github" class="w-4 h-4"></i>
               </a>
             </div>
             <h3 class="text-lg font-semibold text-zinc-100">QA Audit Tracker</h3>
@@ -156,12 +253,12 @@
         </article>
 
         <!-- Project 3 -->
-        <article class="p-6 rounded-xl border border-zinc-800/80 bg-zinc-900/40 hover:border-zinc-700 transition-all flex flex-col justify-between group">
+        <article data-category="fullstack" class="project-card p-6 rounded-xl border border-zinc-800/80 bg-zinc-900/40 hover:border-zinc-700 hover:-translate-y-0.5 hover:shadow-[0_0_40px_-15px_rgba(16,185,129,0.25)] transition-all duration-300 flex flex-col justify-between group">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <span class="text-xs font-mono text-emerald-400 font-medium">Databases / Web</span>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-zinc-500 group-hover:text-zinc-200 transition-colors">
-                <i data-lucide="external-link" class="w-4 h-4"></i>
+              <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-mono text-emerald-400 font-medium">Databases / Full-Stack</span>
+              <a href="https://github.com/dirirahmed" target="_blank" rel="noopener noreferrer" class="text-zinc-500 group-hover:text-zinc-200 transition-colors" aria-label="View eHotels Reservation Platform source on GitHub (opens in a new tab)">
+                <i data-lucide="github" class="w-4 h-4"></i>
               </a>
             </div>
             <h3 class="text-lg font-semibold text-zinc-100">eHotels Reservation Platform</h3>
@@ -177,12 +274,12 @@
         </article>
 
         <!-- Project 4 -->
-        <article class="p-6 rounded-xl border border-zinc-800/80 bg-zinc-900/40 hover:border-zinc-700 transition-all flex flex-col justify-between group">
+        <article data-category="infra" class="project-card p-6 rounded-xl border border-zinc-800/80 bg-zinc-900/40 hover:border-zinc-700 hover:-translate-y-0.5 hover:shadow-[0_0_40px_-15px_rgba(16,185,129,0.25)] transition-all duration-300 flex flex-col justify-between group">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <span class="text-xs font-mono text-emerald-400 font-medium">Linux / Systems</span>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-zinc-500 group-hover:text-zinc-200 transition-colors">
-                <i data-lucide="external-link" class="w-4 h-4"></i>
+              <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-mono text-emerald-400 font-medium">Linux / Infrastructure</span>
+              <a href="https://github.com/dirirahmed" target="_blank" rel="noopener noreferrer" class="text-zinc-500 group-hover:text-zinc-200 transition-colors" aria-label="View Self-Hosted Infrastructure Lab source on GitHub (opens in a new tab)">
+                <i data-lucide="github" class="w-4 h-4"></i>
               </a>
             </div>
             <h3 class="text-lg font-semibold text-zinc-100">Self-Hosted Infrastructure Lab</h3>
@@ -198,6 +295,83 @@
         </article>
 
       </div>
+
+      <p id="no-projects" class="hidden text-sm text-zinc-500 font-mono text-center py-8">No projects in this category yet.</p>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="space-y-8 scroll-mt-24">
+      <div class="space-y-1">
+        <h2 class="text-2xl font-semibold tracking-tight text-zinc-100">Experience &amp; Education</h2>
+        <p class="text-sm text-zinc-400">Professional experience and academic background.</p>
+      </div>
+
+      <ol class="space-y-10">
+
+        <!-- Experience: QA Analyst Intern -->
+        <li class="flex gap-5">
+          <div class="flex flex-col items-center">
+            <span class="flex items-center justify-center w-9 h-9 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 shrink-0">
+              <i data-lucide="briefcase" class="w-4 h-4"></i>
+            </span>
+            <span class="w-px flex-1 bg-zinc-800 mt-2" aria-hidden="true"></span>
+          </div>
+          <div class="pb-2 space-y-2 flex-1">
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h3 class="text-base font-semibold text-zinc-100">Quality Assurance Analyst Intern</h3>
+              <span class="text-xs font-mono text-emerald-400 whitespace-nowrap">Sep 2026 – Present</span>
+            </div>
+            <p class="text-sm text-zinc-500 font-mono">Senate of Canada · Ottawa, Ontario</p>
+            <ul class="text-sm text-zinc-400 leading-relaxed space-y-1.5 list-disc list-outside pl-5">
+              <li>Developed and executed Java-based JUnit unit and functional tests to validate software functionality and ensure application reliability.</li>
+              <li>Designed and executed test cases and scenarios based on business and technical requirements to verify software enhancements.</li>
+              <li>Conducted User Acceptance Testing (UAT), documenting results and defects, and validated enhancements against business requirements.</li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- Experience: Data Analyst Intern -->
+        <li class="flex gap-5">
+          <div class="flex flex-col items-center">
+            <span class="flex items-center justify-center w-9 h-9 rounded-full border border-zinc-700 bg-zinc-900 text-zinc-400 shrink-0">
+              <i data-lucide="briefcase" class="w-4 h-4"></i>
+            </span>
+            <span class="w-px flex-1 bg-zinc-800 mt-2" aria-hidden="true"></span>
+          </div>
+          <div class="pb-2 space-y-2 flex-1">
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h3 class="text-base font-semibold text-zinc-100">Data Analyst Intern</h3>
+              <span class="text-xs font-mono text-zinc-500 whitespace-nowrap">May 2026 – Aug 2026</span>
+            </div>
+            <p class="text-sm text-zinc-500 font-mono">Senate of Canada · Ottawa, Ontario</p>
+            <ul class="text-sm text-zinc-400 leading-relaxed space-y-1.5 list-disc list-outside pl-5">
+              <li>Analyzed, validated, and organized operational datasets in Excel, ensuring data accuracy and reliability for reporting.</li>
+              <li>Developed Power BI dashboards and KPI reports that transformed transportation data into actionable insights.</li>
+              <li>Utilized SQL queries to extract, filter, and validate operational data, supporting reporting and business analysis.</li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- Education -->
+        <li class="flex gap-5">
+          <div class="flex flex-col items-center">
+            <span class="flex items-center justify-center w-9 h-9 rounded-full border border-zinc-700 bg-zinc-900 text-zinc-400 shrink-0">
+              <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+            </span>
+          </div>
+          <div class="space-y-2 flex-1">
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h3 class="text-base font-semibold text-zinc-100">Honours B.Sc., Computer Science</h3>
+              <span class="text-xs font-mono text-zinc-500 whitespace-nowrap">Expected May 2028</span>
+            </div>
+            <p class="text-sm text-zinc-500 font-mono">University of Ottawa · Ottawa, ON</p>
+            <p class="text-sm text-zinc-400 leading-relaxed">
+              Relevant coursework: Data Structures &amp; Algorithms, Software Engineering, Programming Paradigms, Database Systems, Operating Systems, Computer Networks.
+            </p>
+          </div>
+        </li>
+
+      </ol>
     </section>
 
     <!-- Skills Section -->
@@ -207,52 +381,79 @@
         <p class="text-sm text-zinc-400">Core languages, tools, and technical areas I work with.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div class="p-5 rounded-xl border border-zinc-800/80 bg-zinc-900/30 space-y-3">
-          <h3 class="text-sm font-semibold text-zinc-200">Languages</h3>
+          <h3 class="flex items-center gap-2 text-sm font-semibold text-zinc-200">
+            <i data-lucide="code-2" class="w-4 h-4 text-emerald-400"></i>
+            Languages
+          </h3>
           <div class="flex flex-wrap gap-1.5 font-mono text-xs text-zinc-400">
-            <span class="px-2.5 py-1 rounded bg-zinc-800">Go</span>
-            <span class="px-2.5 py-1 rounded bg-zinc-800">Python</span>
-            <span class="px-2.5 py-1 rounded bg-zinc-800">Java</span>
-            <span class="px-2.5 py-1 rounded bg-zinc-800">SQL</span>
-            <span class="px-2.5 py-1 rounded bg-zinc-800">JavaScript</span>
+            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">Go</span>
+            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">Python</span>
+            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">Java</span>
+            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">SQL</span>
+            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">C / Bash</span>
+            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">JavaScript / TypeScript</span>
           </div>
         </div>
 
         <div class="p-5 rounded-xl border border-zinc-800/80 bg-zinc-900/30 space-y-3">
-          <h3 class="text-sm font-semibold text-zinc-200">Backend & Tools</h3>
+          <h3 class="flex items-center gap-2 text-sm font-semibold text-zinc-200">
+            <i data-lucide="server" class="w-4 h-4 text-emerald-400"></i>
+            Backend &amp; Systems
+          </h3>
           <div class="flex flex-wrap gap-1.5 font-mono text-xs text-zinc-400">
-            <span class="px-2.5 py-1 rounded bg-zinc-800">FastAPI</span>
-            <span class="px-2.5 py-1 rounded bg-zinc-800">Node.js</span>
-            <span class="px-2.5 py-1 rounded bg-zinc-800">Git / GitHub</span>
-            <span class="px-2.5 py-1 rounded bg-zinc-800">Linux / Bash</span>
-            <span class="px-2.5 py-1 rounded bg-zinc-800">REST APIs</span>
+            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">FastAPI</span>
+            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">Node.js</span>
+            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">REST APIs</span>
+            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">Linux / Unix</span>
+            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">Git</span>
           </div>
         </div>
 
         <div class="p-5 rounded-xl border border-zinc-800/80 bg-zinc-900/30 space-y-3">
-          <h3 class="text-sm font-semibold text-zinc-200">Databases & Architecture</h3>
+          <h3 class="flex items-center gap-2 text-sm font-semibold text-zinc-200">
+            <i data-lucide="database" class="w-4 h-4 text-emerald-400"></i>
+            Databases
+          </h3>
           <div class="flex flex-wrap gap-1.5 font-mono text-xs text-zinc-400">
-            <span class="px-2.5 py-1 rounded bg-zinc-800">PostgreSQL</span>
-            <span class="px-2.5 py-1 rounded bg-zinc-800">MySQL</span>
-            <span class="px-2.5 py-1 rounded bg-zinc-800">Relational Design</span>
-            <span class="px-2.5 py-1 rounded bg-zinc-800">Concurrency</span>
+            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">PostgreSQL</span>
+            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">MySQL</span>
+            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">Schema Architecture</span>
+            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">ACID Transactions</span>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-xl border border-zinc-800/80 bg-zinc-900/30 space-y-3">
+          <h3 class="flex items-center gap-2 text-sm font-semibold text-zinc-200">
+            <i data-lucide="cpu" class="w-4 h-4 text-emerald-400"></i>
+            Core Concepts
+          </h3>
+          <div class="flex flex-wrap gap-1.5 font-mono text-xs text-zinc-400">
+            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">Concurrency</span>
+            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">CLI Tooling</span>
+            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">Relational Algebra</span>
+            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">Security Fundamentals</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="p-8 rounded-2xl border border-zinc-800 bg-zinc-900/30 text-center space-y-4">
+    <section id="contact" class="p-8 rounded-2xl border border-zinc-800 bg-zinc-900/30 text-center space-y-4 scroll-mt-24">
       <h2 class="text-2xl font-bold tracking-tight text-zinc-100">Get in Touch</h2>
       <p class="text-zinc-400 text-sm max-w-md mx-auto">
-        Feel free to reach out for software development opportunities or technical collaborations.
+        Feel free to reach out for software engineering opportunities or technical collaborations.
       </p>
-      <div class="pt-2">
+      <div class="pt-2 flex flex-wrap items-center justify-center gap-3">
         <a href="mailto:dirir.ahmedd@gmail.com" class="inline-flex items-center space-x-2 px-5 py-2.5 rounded-lg bg-zinc-100 hover:bg-white text-zinc-950 font-medium text-sm transition-colors">
           <i data-lucide="mail" class="w-4 h-4"></i>
           <span>dirir.ahmedd@gmail.com</span>
         </a>
+        <button type="button" onclick="copyEmail('dirir.ahmedd@gmail.com')" class="inline-flex items-center space-x-2 px-5 py-2.5 rounded-lg bg-zinc-800/80 hover:bg-zinc-800 text-zinc-300 font-medium text-sm border border-zinc-700 transition-all" aria-label="Copy email address to clipboard">
+          <i data-lucide="copy" class="w-4 h-4 text-zinc-400"></i>
+          <span>Copy</span>
+        </button>
       </div>
     </section>
 
@@ -261,28 +462,133 @@
   <!-- Footer -->
   <footer class="border-t border-zinc-800/80 py-8 text-center text-xs font-mono text-zinc-500">
     <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <span>© 2026 Dirir A Ibrahim. Built for imdirir.com</span>
-      <div class="flex space-x-4">
-        <a href="#about" class="hover:text-zinc-400 transition-colors">Top</a>
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-400 transition-colors">GitHub</a>
+      <span>&copy; 2026 Dirir Ibrahim. Built for imdirir.com</span>
+      <div class="flex items-center space-x-4">
+        <button type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="inline-flex items-center gap-1.5 hover:text-zinc-300 transition-colors" aria-label="Back to top">
+          <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+          <span>Back to top</span>
+        </button>
+        <a href="https://github.com/dirirahmed" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-300 transition-colors" aria-label="GitHub profile (opens in a new tab)">GitHub</a>
+        <a href="https://www.linkedin.com/in/dirir-a-ibrahim-a37032306/" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-300 transition-colors" aria-label="LinkedIn profile (opens in a new tab)">LinkedIn</a>
       </div>
     </div>
   </footer>
 
   <script>
-    // Initialize Lucide icons
-    lucide.createIcons();
-
-    // Clipboard copy handler
-    function copyEmail(email) {
-      navigator.clipboard.writeText(email).then(() => {
-        const toast = document.getElementById('toast');
-        toast.classList.remove('translate-y-16', 'opacity-0');
-        setTimeout(() => {
-          toast.classList.add('translate-y-16', 'opacity-0');
-        }, 2500);
-      });
+    // Initialize Lucide icons (guarded so a blocked/slow CDN never breaks the
+    // rest of this script — menu, filters, and copy-to-clipboard must keep working)
+    try {
+      if (window.lucide) lucide.createIcons();
+    } catch (err) {
+      console.warn('Lucide icons failed to initialize:', err);
     }
+
+    // Mobile menu toggle
+    (function () {
+      const menuBtn = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      if (!menuBtn || !mobileMenu) return;
+
+      function closeMenu() {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      }
+
+      menuBtn.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        if (isOpen) {
+          closeMenu();
+        } else {
+          mobileMenu.classList.remove('hidden');
+          menuBtn.setAttribute('aria-expanded', 'true');
+          menuIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+        }
+      });
+
+      mobileMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', closeMenu);
+      });
+    })();
+
+    // Clipboard copy handler (with fallback for browsers/contexts without the async Clipboard API)
+    let toastTimeout;
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMessage = document.getElementById('toast-message');
+      if (!toast) return;
+      toastMessage.textContent = message;
+      clearTimeout(toastTimeout);
+      toast.classList.remove('translate-y-16', 'opacity-0');
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('translate-y-16', 'opacity-0');
+      }, 2500);
+    }
+
+    function copyEmail(email) {
+      const fallbackCopy = () => {
+        try {
+          const textarea = document.createElement('textarea');
+          textarea.value = email;
+          textarea.style.position = 'fixed';
+          textarea.style.opacity = '0';
+          document.body.appendChild(textarea);
+          textarea.focus();
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+          showToast('Email copied to clipboard!');
+        } catch (err) {
+          showToast('Copy failed — email is ' + email);
+        }
+      };
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(
+          () => showToast('Email copied to clipboard!'),
+          fallbackCopy
+        );
+      } else {
+        fallbackCopy();
+      }
+    }
+
+    // Project filter bar
+    (function () {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.project-card');
+      const noResults = document.getElementById('no-projects');
+
+      const activeClasses = ['bg-zinc-100', 'text-zinc-950', 'border-zinc-100'];
+      const inactiveClasses = ['bg-zinc-900/60', 'text-zinc-400', 'border-zinc-800'];
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+
+          filterBtns.forEach((b) => {
+            const isActive = b === btn;
+            b.setAttribute('aria-pressed', String(isActive));
+            b.classList.remove(...activeClasses, ...inactiveClasses);
+            b.classList.add(...(isActive ? activeClasses : inactiveClasses));
+          });
+
+          let visibleCount = 0;
+          cards.forEach((card) => {
+            const matches = filter === 'all' || card.getAttribute('data-category') === filter;
+            card.classList.toggle('hidden', !matches);
+            if (matches) visibleCount++;
+          });
+
+          if (noResults) noResults.classList.toggle('hidden', visibleCount !== 0);
+        });
+      });
+    })();
   </script>
 </body>
 </html>
