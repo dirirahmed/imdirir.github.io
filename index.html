@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Dirir Ibrahim | Software Engineer</title>
-  <meta name="description" content="Dirir Ibrahim — Software Engineer and Computer Science student in Ottawa, Ontario, focused on backend engineering, concurrency, and resilient systems.">
-  <meta name="author" content="Dirir Ibrahim">
+  <title>Dirir A. Ibrahim</title>
+  <meta name="description" content="Personal site of Dirir A. Ibrahim, a Computer Science student at the University of Ottawa.">
+  <meta name="author" content="Dirir A. Ibrahim">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#121215">
   <link rel="canonical" href="https://imdirir.com/">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%200%20100%20100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Dirir Ibrahim | Software Engineer">
-  <meta property="og:description" content="Software Engineer and Computer Science student in Ottawa, Ontario, focused on backend engineering, concurrency, and resilient systems.">
+  <meta property="og:title" content="Dirir A. Ibrahim">
+  <meta property="og:description" content="Personal site of Dirir A. Ibrahim, a Computer Science student at the University of Ottawa.">
   <meta property="og:url" content="https://imdirir.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="imdirir.com">
@@ -24,8 +24,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dirir Ibrahim | Software Engineer">
-  <meta name="twitter:description" content="Software Engineer and Computer Science student in Ottawa, Ontario, focused on backend engineering, concurrency, and resilient systems.">
+  <meta name="twitter:title" content="Dirir A. Ibrahim">
+  <meta name="twitter:description" content="Personal site of Dirir A. Ibrahim, a Computer Science student at the University of Ottawa.">
   <meta name="twitter:image" content="https://imdirir.com/og-image.png">
 
   <!-- Tailwind CSS -->
@@ -64,11 +64,11 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Dirir Ibrahim",
+    "name": "Dirir A. Ibrahim",
     "alternateName": "Dirir Ahmed Ibrahim",
     "url": "https://imdirir.com/",
     "image": "https://imdirir.com/og-image.png",
-    "jobTitle": "Software Engineer",
+    "jobTitle": "Computer Science Student",
     "email": "mailto:dirir.ahmedd@gmail.com",
     "address": {
       "@type": "PostalAddress",
@@ -99,88 +99,59 @@
     Skip to content
   </a>
 
-  <!-- Floating Toast Notification -->
-  <div id="toast" role="status" aria-live="polite" class="fixed bottom-6 right-6 z-[60] transform translate-y-16 opacity-0 transition-all duration-300 pointer-events-none bg-zinc-800 text-zinc-100 px-4 py-2.5 rounded-lg border border-zinc-700 shadow-xl flex items-center space-x-2 text-sm font-medium">
-    <i data-lucide="check" class="w-4 h-4 text-blue-400"></i>
-    <span id="toast-message">Email copied to clipboard!</span>
-  </div>
-
-  <!-- Navigation -->
-  <header class="sticky top-0 z-50 w-full backdrop-blur-md bg-[#121215]/80 border-b border-zinc-800/80">
-    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+  <!-- Top bar: lightweight, always-visible orientation strip — just the logo and the
+       current section name (updates as you scroll). Not a full nav; that's the left dot nav. -->
+  <header id="top-bar" class="sticky top-0 z-30 w-full h-14 backdrop-blur-md bg-[#121215]/80 border-b border-zinc-800/70">
+    <div class="max-w-5xl mx-auto px-6 sm:pl-16 h-full flex items-center justify-between">
       <a href="#home" class="font-mono text-sm tracking-wider font-semibold text-zinc-100 hover:text-blue-400 transition-colors">
         dirir
       </a>
-
-      <nav aria-label="Primary" class="hidden md:flex items-center space-x-8 text-sm font-medium text-zinc-400">
-        <a href="#home" class="hover:text-zinc-100 transition-colors">Home</a>
-        <a href="#about" class="hover:text-zinc-100 transition-colors">About</a>
-        <a href="#projects" class="hover:text-zinc-100 transition-colors">Projects</a>
-        <a href="#experience" class="hover:text-zinc-100 transition-colors">Experience</a>
-        <a href="#skills" class="hover:text-zinc-100 transition-colors">Skills</a>
-      </nav>
-
-      <div class="flex items-center space-x-1">
-        <a href="https://github.com/dirirahmed" target="_blank" rel="noopener noreferrer" class="p-2 rounded-md hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 transition-colors" aria-label="GitHub profile (opens in a new tab)">
-          <i data-lucide="github" class="w-4 h-4"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/dirir-a-ibrahim-a37032306/" target="_blank" rel="noopener noreferrer" class="p-2 rounded-md hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 transition-colors" aria-label="LinkedIn profile (opens in a new tab)">
-          <i data-lucide="linkedin" class="w-4 h-4"></i>
-        </a>
-        <a href="mailto:dirir.ahmedd@gmail.com" class="p-2 rounded-md hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 transition-colors" aria-label="Send an email to dirir.ahmedd@gmail.com">
-          <i data-lucide="mail" class="w-4 h-4"></i>
-        </a>
-
-        <button id="menu-toggle" type="button" class="md:hidden ml-1 p-2 rounded-md hover:bg-zinc-800 text-zinc-300 transition-colors" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
-          <i data-lucide="menu" id="menu-icon" class="w-5 h-5"></i>
-          <i data-lucide="x" id="close-icon" class="w-5 h-5 hidden"></i>
-        </button>
-      </div>
+      <span id="top-bar-section" class="font-mono text-xs tracking-[0.15em] uppercase text-zinc-500">Home</span>
     </div>
-
-    <!-- Mobile menu -->
-    <nav id="mobile-menu" aria-label="Mobile" class="hidden md:hidden border-t border-zinc-800/80 bg-[#121215]/95 backdrop-blur-md">
-      <div class="max-w-5xl mx-auto px-6 py-4 flex flex-col space-y-1 text-sm font-medium text-zinc-400">
-        <a href="#home" class="px-2 py-2.5 rounded-md hover:bg-zinc-900 hover:text-zinc-100 transition-colors">Home</a>
-        <a href="#about" class="px-2 py-2.5 rounded-md hover:bg-zinc-900 hover:text-zinc-100 transition-colors">About</a>
-        <a href="#projects" class="px-2 py-2.5 rounded-md hover:bg-zinc-900 hover:text-zinc-100 transition-colors">Projects</a>
-        <a href="#experience" class="px-2 py-2.5 rounded-md hover:bg-zinc-900 hover:text-zinc-100 transition-colors">Experience</a>
-        <a href="#skills" class="px-2 py-2.5 rounded-md hover:bg-zinc-900 hover:text-zinc-100 transition-colors">Skills</a>
-      </div>
-    </nav>
   </header>
+
+  <!-- Vertical section navigation (left side). Highlights the section in view, and fades out
+       after a few idle seconds, reappearing the moment the user scrolls or focuses it. -->
+  <nav id="side-nav" aria-label="Section navigation" class="fixed left-4 sm:left-8 top-1/2 -translate-y-1/2 z-40 opacity-100 transition-opacity duration-500 ease-out">
+    <div class="relative flex flex-col items-start gap-7">
+      <div class="absolute left-[3px] top-1 bottom-1 w-px bg-zinc-800" aria-hidden="true"></div>
+
+      <a href="#home" data-section="home" class="side-nav-link group relative z-10 flex items-center gap-3 py-0.5">
+        <span class="side-nav-dot block w-[7px] h-[7px] rounded-full bg-zinc-600 ring-4 ring-[#121215] transition-all duration-300 group-hover:bg-zinc-400"></span>
+        <span class="side-nav-label hidden sm:inline text-xs font-mono tracking-wide text-zinc-600 transition-colors duration-300 group-hover:text-zinc-300">Home</span>
+      </a>
+      <a href="#about" data-section="about" class="side-nav-link group relative z-10 flex items-center gap-3 py-0.5">
+        <span class="side-nav-dot block w-[7px] h-[7px] rounded-full bg-zinc-600 ring-4 ring-[#121215] transition-all duration-300 group-hover:bg-zinc-400"></span>
+        <span class="side-nav-label hidden sm:inline text-xs font-mono tracking-wide text-zinc-600 transition-colors duration-300 group-hover:text-zinc-300">About</span>
+      </a>
+      <a href="#experience" data-section="experience" class="side-nav-link group relative z-10 flex items-center gap-3 py-0.5">
+        <span class="side-nav-dot block w-[7px] h-[7px] rounded-full bg-zinc-600 ring-4 ring-[#121215] transition-all duration-300 group-hover:bg-zinc-400"></span>
+        <span class="side-nav-label hidden sm:inline text-xs font-mono tracking-wide text-zinc-600 transition-colors duration-300 group-hover:text-zinc-300">Experience</span>
+      </a>
+      <a href="#projects" data-section="projects" class="side-nav-link group relative z-10 flex items-center gap-3 py-0.5">
+        <span class="side-nav-dot block w-[7px] h-[7px] rounded-full bg-zinc-600 ring-4 ring-[#121215] transition-all duration-300 group-hover:bg-zinc-400"></span>
+        <span class="side-nav-label hidden sm:inline text-xs font-mono tracking-wide text-zinc-600 transition-colors duration-300 group-hover:text-zinc-300">Projects</span>
+      </a>
+    </div>
+  </nav>
 
   <main id="main" class="flex-1 w-full">
 
-    <!-- Hero / Landing Section (full viewport) -->
-    <section id="home" class="relative min-h-[calc(100svh-4rem)] flex flex-col justify-center border-b border-zinc-900/60 overflow-hidden">
-      <div class="max-w-5xl mx-auto px-6 w-full py-16">
+    <!-- Hero / Landing Section (full viewport, personal intro rather than a resume header) -->
+    <section id="home" class="relative min-h-[calc(100svh-3.5rem)] flex flex-col justify-center border-b border-zinc-900/60 overflow-hidden">
+      <div class="max-w-5xl mx-auto px-6 sm:pl-16 w-full py-16">
         <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center">
 
           <!-- Text column -->
-          <div class="space-y-6 order-2 lg:order-1 text-center lg:text-left">
-            <div class="space-y-2">
-              <h1 class="text-5xl sm:text-6xl font-bold tracking-tight text-zinc-100 leading-[1.05]">
-                Dirir A. Ibrahim
-              </h1>
-            </div>
+          <div class="space-y-8 order-2 lg:order-1 text-center lg:text-left">
+            <h1 class="text-5xl sm:text-6xl font-bold tracking-tight text-zinc-100 leading-[1.05]">
+              Welcome, I'm <span class="text-blue-400">Dirir</span>.
+            </h1>
 
-            <p class="text-base sm:text-lg text-zinc-400 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
-              I build backend services and systems tooling, with a focus on concurrency, correctness, and resilient infrastructure under real-world failure conditions.
-            </p>
-
-            <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-3">
-              <a href="#projects" class="px-4 py-2 rounded-lg bg-zinc-100 hover:bg-white text-zinc-950 font-medium text-sm transition-colors">
+            <div class="flex items-center justify-center lg:justify-start">
+              <a href="#projects" class="px-5 py-2.5 rounded-lg bg-blue-500 hover:bg-blue-400 text-white font-medium text-sm transition-colors shadow-[0_0_30px_-12px_rgba(59,130,246,0.6)]">
                 View Projects
               </a>
-              <a href="./DirirA_Ibrahim_SweResume.pdf" download="Dirir_Ibrahim_Resume.pdf" class="px-4 py-2 rounded-lg bg-zinc-800/80 hover:bg-zinc-800 text-zinc-300 font-medium text-sm border border-zinc-700 transition-all flex items-center space-x-2">
-                <i data-lucide="download" class="w-3.5 h-3.5 text-zinc-400"></i>
-                <span>Download Resume</span>
-              </a>
-              <button id="copy-email-btn" type="button" onclick="copyEmail('dirir.ahmedd@gmail.com')" class="px-4 py-2 rounded-lg bg-zinc-800/80 hover:bg-zinc-800 text-zinc-300 font-medium text-sm border border-zinc-700 transition-all flex items-center space-x-2">
-                <i data-lucide="copy" class="w-3.5 h-3.5 text-zinc-400"></i>
-                <span>Copy Email</span>
-              </button>
             </div>
           </div>
 
@@ -204,7 +175,7 @@
       </div>
 
       <!-- Scroll cue -->
-      <button type="button" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})" aria-label="Scroll to projects" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-zinc-500 hover:text-zinc-300 transition-colors">
+      <button type="button" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})" aria-label="Scroll to About" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-zinc-500 hover:text-zinc-300 transition-colors">
         <span class="text-[10px] font-mono tracking-[0.2em] uppercase">Scroll</span>
         <span class="w-9 h-9 rounded-full border border-zinc-800 flex items-center justify-center animate-bounce">
           <i data-lucide="chevron-down" class="w-4 h-4"></i>
@@ -212,142 +183,63 @@
       </button>
     </section>
 
-    <div class="max-w-5xl mx-auto px-6 py-16 sm:py-24 space-y-28 w-full">
+    <div class="max-w-5xl mx-auto px-6 sm:pl-16 py-16 sm:py-24 space-y-28 w-full">
 
-    <!-- About Section (placeholder — content to be filled in later) -->
-    <section id="about" class="space-y-4 scroll-mt-24">
-      <h2 class="text-2xl font-semibold tracking-tight text-zinc-100">About</h2>
-      <p class="text-sm text-zinc-500 font-mono">More about me — coming soon.</p>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="space-y-8 scroll-mt-24">
+    <!-- About Section -->
+    <section id="about" class="space-y-8 scroll-mt-24">
       <div class="space-y-1">
-        <h2 class="text-2xl font-semibold tracking-tight text-zinc-100">Projects</h2>
-        <p class="text-sm text-zinc-400">A few things I've built, broken, and learned from along the way lol.</p>
+        <h2 class="text-2xl font-semibold tracking-tight text-zinc-100">About</h2>
       </div>
 
-      <!--
-        Project window template: each project is one <article class="project-card"> below.
-        To add a future project (e.g. Net-Pulse, an AWS/cloud project, an AI + security project),
-        copy one of these <article> blocks, bump the "Project 0N" label and icon, and fill in
-        the badge / title / description / tech pills. Grid auto-flows 2-per-row on desktop and
-        stacks on mobile, so no other markup needs to change.
-      -->
-      <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Personal intro — a first draft, to be refined together in Dirir's own voice -->
+      <p class="text-base sm:text-lg text-zinc-300 leading-relaxed max-w-2xl">
+        I'm a Computer Science student at the University of Ottawa who genuinely enjoys solving hard problems — the kind where you're stuck for a while and then it just clicks. Outside of that, you'll probably find me playing or watching basketball and soccer, checking sports stats way more than I should, or losing track of time in Rocket League.
+      </p>
 
-        <!-- Project 1 -->
-        <article class="project-card group rounded-2xl border border-zinc-800/80 bg-zinc-900/30 overflow-hidden hover:border-zinc-700 hover:-translate-y-1 hover:shadow-[0_0_50px_-20px_rgba(59,130,246,0.3)] transition-all duration-300 flex flex-col">
-          <div class="relative h-28 sm:h-32 border-b border-zinc-800/80 bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-950 overflow-hidden">
-            <div class="absolute inset-0" style="background-image: radial-gradient(circle, #3f3f46 1px, transparent 1px); background-size: 22px 22px; opacity: 0.2;" aria-hidden="true"></div>
-            <span class="absolute top-4 left-5 font-mono text-[11px] tracking-[0.2em] text-zinc-600 uppercase">Project 01</span>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <i data-lucide="terminal" class="w-8 h-8 text-zinc-700 group-hover:text-blue-500/60 transition-colors duration-300"></i>
+      <!-- Compact technical section (moved here from the old standalone Skills section) -->
+      <div class="rounded-xl border border-zinc-800/80 bg-zinc-900/30 p-5 sm:p-6 space-y-4">
+        <h3 class="text-xs font-mono uppercase tracking-[0.2em] text-zinc-500">What I work with</h3>
+        <div class="space-y-3">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1.5 sm:gap-4">
+            <span class="text-xs font-mono text-zinc-500 sm:w-36 shrink-0">Languages</span>
+            <div class="flex flex-wrap gap-1.5 font-mono text-xs text-zinc-400">
+              <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">Go</span>
+              <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">Python</span>
+              <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">Java</span>
+              <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">SQL</span>
+              <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">C / Bash</span>
+              <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">JavaScript / TypeScript</span>
             </div>
           </div>
-          <div class="p-5 sm:p-6 flex flex-col flex-1 space-y-3">
-            <div class="flex items-center justify-between gap-3">
-              <span class="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400 font-medium">Go / Systems</span>
-              <a href="https://github.com/dirirahmed" target="_blank" rel="noopener noreferrer" class="text-zinc-500 group-hover:text-zinc-200 transition-colors" aria-label="View Go-Janitor CLI source on GitHub (opens in a new tab)">
-                <i data-lucide="github" class="w-4 h-4"></i>
-              </a>
-            </div>
-            <h3 class="text-lg sm:text-xl font-semibold text-zinc-100">Go-Janitor CLI</h3>
-            <p class="text-sm text-zinc-400 leading-relaxed flex-1">
-              A concurrent command-line file organizer designed to safely batch sort directories. Uses goroutines, waitgroups, atomic renames, and a rollback manifest system.
-            </p>
-            <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-zinc-400 pt-2">
-              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">Go</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">Concurrency</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">CLI</span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1.5 sm:gap-4">
+            <span class="text-xs font-mono text-zinc-500 sm:w-36 shrink-0">Backend &amp; Systems</span>
+            <div class="flex flex-wrap gap-1.5 font-mono text-xs text-zinc-400">
+              <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">FastAPI</span>
+              <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">Node.js</span>
+              <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">REST APIs</span>
+              <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">Linux / Unix</span>
+              <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">Git</span>
             </div>
           </div>
-        </article>
-
-        <!-- Project 2 -->
-        <article class="project-card group rounded-2xl border border-zinc-800/80 bg-zinc-900/30 overflow-hidden hover:border-zinc-700 hover:-translate-y-1 hover:shadow-[0_0_50px_-20px_rgba(59,130,246,0.3)] transition-all duration-300 flex flex-col">
-          <div class="relative h-28 sm:h-32 border-b border-zinc-800/80 bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-950 overflow-hidden">
-            <div class="absolute inset-0" style="background-image: radial-gradient(circle, #3f3f46 1px, transparent 1px); background-size: 22px 22px; opacity: 0.2;" aria-hidden="true"></div>
-            <span class="absolute top-4 left-5 font-mono text-[11px] tracking-[0.2em] text-zinc-600 uppercase">Project 02</span>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <i data-lucide="clipboard-check" class="w-8 h-8 text-zinc-700 group-hover:text-blue-500/60 transition-colors duration-300"></i>
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1.5 sm:gap-4">
+            <span class="text-xs font-mono text-zinc-500 sm:w-36 shrink-0">Databases</span>
+            <div class="flex flex-wrap gap-1.5 font-mono text-xs text-zinc-400">
+              <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">PostgreSQL</span>
+              <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">MySQL</span>
+              <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">Schema Architecture</span>
+              <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">ACID Transactions</span>
             </div>
           </div>
-          <div class="p-5 sm:p-6 flex flex-col flex-1 space-y-3">
-            <div class="flex items-center justify-between gap-3">
-              <span class="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400 font-medium">Python / Full-Stack</span>
-              <a href="https://github.com/dirirahmed" target="_blank" rel="noopener noreferrer" class="text-zinc-500 group-hover:text-zinc-200 transition-colors" aria-label="View QA Audit Tracker source on GitHub (opens in a new tab)">
-                <i data-lucide="github" class="w-4 h-4"></i>
-              </a>
-            </div>
-            <h3 class="text-lg sm:text-xl font-semibold text-zinc-100">QA Audit Tracker</h3>
-            <p class="text-sm text-zinc-400 leading-relaxed flex-1">
-              An internal tracking and auditing web application featuring relational schema definitions, role-based workflows, and reporting views.
-            </p>
-            <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-zinc-400 pt-2">
-              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">FastAPI</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">PostgreSQL</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">SQLAlchemy</span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1.5 sm:gap-4">
+            <span class="text-xs font-mono text-zinc-500 sm:w-36 shrink-0">Core Concepts</span>
+            <div class="flex flex-wrap gap-1.5 font-mono text-xs text-zinc-400">
+              <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">Concurrency</span>
+              <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">CLI Tooling</span>
+              <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">Relational Algebra</span>
+              <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">Security Fundamentals</span>
             </div>
           </div>
-        </article>
-
-        <!-- Project 3 -->
-        <article class="project-card group rounded-2xl border border-zinc-800/80 bg-zinc-900/30 overflow-hidden hover:border-zinc-700 hover:-translate-y-1 hover:shadow-[0_0_50px_-20px_rgba(59,130,246,0.3)] transition-all duration-300 flex flex-col">
-          <div class="relative h-28 sm:h-32 border-b border-zinc-800/80 bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-950 overflow-hidden">
-            <div class="absolute inset-0" style="background-image: radial-gradient(circle, #3f3f46 1px, transparent 1px); background-size: 22px 22px; opacity: 0.2;" aria-hidden="true"></div>
-            <span class="absolute top-4 left-5 font-mono text-[11px] tracking-[0.2em] text-zinc-600 uppercase">Project 03</span>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <i data-lucide="calendar" class="w-8 h-8 text-zinc-700 group-hover:text-blue-500/60 transition-colors duration-300"></i>
-            </div>
-          </div>
-          <div class="p-5 sm:p-6 flex flex-col flex-1 space-y-3">
-            <div class="flex items-center justify-between gap-3">
-              <span class="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400 font-medium">Databases / Full-Stack</span>
-              <a href="https://github.com/dirirahmed" target="_blank" rel="noopener noreferrer" class="text-zinc-500 group-hover:text-zinc-200 transition-colors" aria-label="View eHotels Reservation Platform source on GitHub (opens in a new tab)">
-                <i data-lucide="github" class="w-4 h-4"></i>
-              </a>
-            </div>
-            <h3 class="text-lg sm:text-xl font-semibold text-zinc-100">eHotels Reservation Platform</h3>
-            <p class="text-sm text-zinc-400 leading-relaxed flex-1">
-              A booking database system implementing constraints, triggers, and nested relational queries connected to a Node.js backend.
-            </p>
-            <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-zinc-400 pt-2">
-              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">MySQL</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">Node.js</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">Express</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 4 -->
-        <article class="project-card group rounded-2xl border border-zinc-800/80 bg-zinc-900/30 overflow-hidden hover:border-zinc-700 hover:-translate-y-1 hover:shadow-[0_0_50px_-20px_rgba(59,130,246,0.3)] transition-all duration-300 flex flex-col">
-          <div class="relative h-28 sm:h-32 border-b border-zinc-800/80 bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-950 overflow-hidden">
-            <div class="absolute inset-0" style="background-image: radial-gradient(circle, #3f3f46 1px, transparent 1px); background-size: 22px 22px; opacity: 0.2;" aria-hidden="true"></div>
-            <span class="absolute top-4 left-5 font-mono text-[11px] tracking-[0.2em] text-zinc-600 uppercase">Project 04</span>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <i data-lucide="server" class="w-8 h-8 text-zinc-700 group-hover:text-blue-500/60 transition-colors duration-300"></i>
-            </div>
-          </div>
-          <div class="p-5 sm:p-6 flex flex-col flex-1 space-y-3">
-            <div class="flex items-center justify-between gap-3">
-              <span class="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400 font-medium">Linux / Infrastructure</span>
-              <a href="https://github.com/dirirahmed" target="_blank" rel="noopener noreferrer" class="text-zinc-500 group-hover:text-zinc-200 transition-colors" aria-label="View Self-Hosted Infrastructure Lab source on GitHub (opens in a new tab)">
-                <i data-lucide="github" class="w-4 h-4"></i>
-              </a>
-            </div>
-            <h3 class="text-lg sm:text-xl font-semibold text-zinc-100">Self-Hosted Infrastructure Lab</h3>
-            <p class="text-sm text-zinc-400 leading-relaxed flex-1">
-              Virtual server environments deployed on Debian Linux with remote SSH access, automated backup persistence, and port-forwarded routing.
-            </p>
-            <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-zinc-400 pt-2">
-              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">Linux</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">Debian</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">Bash / Networking</span>
-            </div>
-          </div>
-        </article>
-
+        </div>
       </div>
     </section>
 
@@ -400,72 +292,136 @@
         </li>
 
       </ol>
-
-      <p class="text-xs font-mono text-zinc-600 pl-14">Studying Computer Science (Honours) at the University of Ottawa.</p>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="space-y-8 scroll-mt-24">
+    <!-- Projects Section -->
+    <section id="projects" class="space-y-8 scroll-mt-24">
       <div class="space-y-1">
-        <h2 class="text-2xl font-semibold tracking-tight text-zinc-100">Technical Skills</h2>
-        <p class="text-sm text-zinc-400">Core languages, tools, and technical areas I work with.</p>
+        <h2 class="text-2xl font-semibold tracking-tight text-zinc-100">Projects</h2>
+        <p class="text-sm text-zinc-400">A few things I've built, broken, and learned from along the way lol.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-        <div class="p-5 rounded-xl border border-zinc-800/80 bg-zinc-900/30 space-y-3">
-          <h3 class="flex items-center gap-2 text-sm font-semibold text-zinc-200">
-            <i data-lucide="code-2" class="w-4 h-4 text-blue-400"></i>
-            Languages
-          </h3>
-          <div class="flex flex-wrap gap-1.5 font-mono text-xs text-zinc-400">
-            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">Go</span>
-            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">Python</span>
-            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">Java</span>
-            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">SQL</span>
-            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">C / Bash</span>
-            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">JavaScript / TypeScript</span>
-          </div>
-        </div>
+      <!--
+        Project window template: each project is one <article class="project-card"> below.
+        To add a future project (e.g. Net-Pulse, an AWS/cloud project, an AI + security project),
+        copy one of these <article> blocks, bump the "Project 0N" label and icon, and fill in
+        the badge / title / description / tech pills. Grid auto-flows 2-per-row on desktop and
+        stacks on mobile, so no other markup needs to change.
+      -->
+      <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-        <div class="p-5 rounded-xl border border-zinc-800/80 bg-zinc-900/30 space-y-3">
-          <h3 class="flex items-center gap-2 text-sm font-semibold text-zinc-200">
-            <i data-lucide="server" class="w-4 h-4 text-blue-400"></i>
-            Backend &amp; Systems
-          </h3>
-          <div class="flex flex-wrap gap-1.5 font-mono text-xs text-zinc-400">
-            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">FastAPI</span>
-            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">Node.js</span>
-            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">REST APIs</span>
-            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">Linux / Unix</span>
-            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">Git</span>
+        <!-- Project 1 -->
+        <article class="project-card group rounded-2xl border border-zinc-800/80 bg-zinc-900/30 overflow-hidden hover:border-zinc-700 hover:-translate-y-1 hover:shadow-[0_0_50px_-20px_rgba(59,130,246,0.3)] transition-all duration-300 flex flex-col">
+          <div class="relative h-28 sm:h-32 border-b border-zinc-800/80 bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-950 overflow-hidden">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle, #3f3f46 1px, transparent 1px); background-size: 22px 22px; opacity: 0.2;" aria-hidden="true"></div>
+            <span class="absolute top-4 left-5 font-mono text-[11px] tracking-[0.2em] text-zinc-600 uppercase">Project 01</span>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <i data-lucide="radar" class="w-8 h-8 text-zinc-700 group-hover:text-blue-500/60 transition-colors duration-300"></i>
+            </div>
           </div>
-        </div>
+          <div class="p-5 sm:p-6 flex flex-col flex-1 space-y-3">
+            <div class="flex items-center justify-between gap-3">
+              <span class="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400 font-medium">Go / Networking</span>
+              <a href="https://github.com/dirirahmed/Net-Pulse" target="_blank" rel="noopener noreferrer" class="text-zinc-500 group-hover:text-zinc-200 transition-colors" aria-label="View Net-Pulse source on GitHub (opens in a new tab)">
+                <i data-lucide="github" class="w-4 h-4"></i>
+              </a>
+            </div>
+            <h3 class="text-lg sm:text-xl font-semibold text-zinc-100">Net-Pulse</h3>
+            <p class="text-sm text-zinc-400 leading-relaxed flex-1">
+              A Go network diagnostic tool that probes DNS, TCP, ports, TLS, and HTTP across a configurable worker pool with context cancellation and per-probe timeouts, validated by unit tests, benchmarks, and race detection across 7 test suites.
+            </p>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-zinc-400 pt-2">
+              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">Go</span>
+              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">Concurrency</span>
+              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">CI / Testing</span>
+            </div>
+          </div>
+        </article>
 
-        <div class="p-5 rounded-xl border border-zinc-800/80 bg-zinc-900/30 space-y-3">
-          <h3 class="flex items-center gap-2 text-sm font-semibold text-zinc-200">
-            <i data-lucide="database" class="w-4 h-4 text-blue-400"></i>
-            Databases
-          </h3>
-          <div class="flex flex-wrap gap-1.5 font-mono text-xs text-zinc-400">
-            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">PostgreSQL</span>
-            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">MySQL</span>
-            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">Schema Architecture</span>
-            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">ACID Transactions</span>
+        <!-- Project 2 -->
+        <article class="project-card group rounded-2xl border border-zinc-800/80 bg-zinc-900/30 overflow-hidden hover:border-zinc-700 hover:-translate-y-1 hover:shadow-[0_0_50px_-20px_rgba(59,130,246,0.3)] transition-all duration-300 flex flex-col">
+          <div class="relative h-28 sm:h-32 border-b border-zinc-800/80 bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-950 overflow-hidden">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle, #3f3f46 1px, transparent 1px); background-size: 22px 22px; opacity: 0.2;" aria-hidden="true"></div>
+            <span class="absolute top-4 left-5 font-mono text-[11px] tracking-[0.2em] text-zinc-600 uppercase">Project 02</span>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <i data-lucide="terminal" class="w-8 h-8 text-zinc-700 group-hover:text-blue-500/60 transition-colors duration-300"></i>
+            </div>
           </div>
-        </div>
+          <div class="p-5 sm:p-6 flex flex-col flex-1 space-y-3">
+            <div class="flex items-center justify-between gap-3">
+              <span class="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400 font-medium">Go / Systems</span>
+              <a href="https://github.com/dirirahmed/Go-Janitor" target="_blank" rel="noopener noreferrer" class="text-zinc-500 group-hover:text-zinc-200 transition-colors" aria-label="View Go-Janitor CLI source on GitHub (opens in a new tab)">
+                <i data-lucide="github" class="w-4 h-4"></i>
+              </a>
+            </div>
+            <h3 class="text-lg sm:text-xl font-semibold text-zinc-100">Go-Janitor CLI</h3>
+            <p class="text-sm text-zinc-400 leading-relaxed flex-1">
+              A concurrent command-line file organizer designed to safely batch sort directories. Uses goroutines, waitgroups, atomic renames, and a rollback manifest system.
+            </p>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-zinc-400 pt-2">
+              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">Go</span>
+              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">Concurrency</span>
+              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">CLI</span>
+            </div>
+          </div>
+        </article>
 
-        <div class="p-5 rounded-xl border border-zinc-800/80 bg-zinc-900/30 space-y-3">
-          <h3 class="flex items-center gap-2 text-sm font-semibold text-zinc-200">
-            <i data-lucide="cpu" class="w-4 h-4 text-blue-400"></i>
-            Core Concepts
-          </h3>
-          <div class="flex flex-wrap gap-1.5 font-mono text-xs text-zinc-400">
-            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">Concurrency</span>
-            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">CLI Tooling</span>
-            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">Relational Algebra</span>
-            <span class="px-2.5 py-1 rounded-md bg-zinc-800/60 border border-zinc-700/50">Security Fundamentals</span>
+        <!-- Project 3 -->
+        <article class="project-card group rounded-2xl border border-zinc-800/80 bg-zinc-900/30 overflow-hidden hover:border-zinc-700 hover:-translate-y-1 hover:shadow-[0_0_50px_-20px_rgba(59,130,246,0.3)] transition-all duration-300 flex flex-col">
+          <div class="relative h-28 sm:h-32 border-b border-zinc-800/80 bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-950 overflow-hidden">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle, #3f3f46 1px, transparent 1px); background-size: 22px 22px; opacity: 0.2;" aria-hidden="true"></div>
+            <span class="absolute top-4 left-5 font-mono text-[11px] tracking-[0.2em] text-zinc-600 uppercase">Project 03</span>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <i data-lucide="calendar" class="w-8 h-8 text-zinc-700 group-hover:text-blue-500/60 transition-colors duration-300"></i>
+            </div>
           </div>
-        </div>
+          <div class="p-5 sm:p-6 flex flex-col flex-1 space-y-3">
+            <div class="flex items-center justify-between gap-3">
+              <span class="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400 font-medium">Databases / Full-Stack</span>
+              <a href="https://github.com/dirirahmed/csi2532" target="_blank" rel="noopener noreferrer" class="text-zinc-500 group-hover:text-zinc-200 transition-colors" aria-label="View eHotels Reservation Platform source on GitHub (opens in a new tab)">
+                <i data-lucide="github" class="w-4 h-4"></i>
+              </a>
+            </div>
+            <h3 class="text-lg sm:text-xl font-semibold text-zinc-100">eHotels Reservation Platform</h3>
+            <p class="text-sm text-zinc-400 leading-relaxed flex-1">
+              A booking database system implementing constraints, triggers, and nested relational queries connected to a Node.js backend.
+            </p>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-zinc-400 pt-2">
+              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">MySQL</span>
+              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">Node.js</span>
+              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">Express</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card group rounded-2xl border border-zinc-800/80 bg-zinc-900/30 overflow-hidden hover:border-zinc-700 hover:-translate-y-1 hover:shadow-[0_0_50px_-20px_rgba(59,130,246,0.3)] transition-all duration-300 flex flex-col">
+          <div class="relative h-28 sm:h-32 border-b border-zinc-800/80 bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-950 overflow-hidden">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle, #3f3f46 1px, transparent 1px); background-size: 22px 22px; opacity: 0.2;" aria-hidden="true"></div>
+            <span class="absolute top-4 left-5 font-mono text-[11px] tracking-[0.2em] text-zinc-600 uppercase">Project 04</span>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <i data-lucide="binary" class="w-8 h-8 text-zinc-700 group-hover:text-blue-500/60 transition-colors duration-300"></i>
+            </div>
+          </div>
+          <div class="p-5 sm:p-6 flex flex-col flex-1 space-y-3">
+            <div class="flex items-center justify-between gap-3">
+              <span class="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400 font-medium">Java / CLI</span>
+              <a href="https://github.com/dirirahmed/Logic-Gate" target="_blank" rel="noopener noreferrer" class="text-zinc-500 group-hover:text-zinc-200 transition-colors" aria-label="View Logic-Gate source on GitHub (opens in a new tab)">
+                <i data-lucide="github" class="w-4 h-4"></i>
+              </a>
+            </div>
+            <h3 class="text-lg sm:text-xl font-semibold text-zinc-100">Logic-Gate</h3>
+            <p class="text-sm text-zinc-400 leading-relaxed flex-1">
+              A command-line truth-table generator that parses boolean expressions and evaluates every variable combination, built while studying discrete structures at uOttawa.
+            </p>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-zinc-400 pt-2">
+              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">Java</span>
+              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">Boolean Logic</span>
+              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">CLI</span>
+            </div>
+          </div>
+        </article>
+
       </div>
     </section>
 
@@ -474,7 +430,7 @@
 
   <!-- Footer -->
   <footer class="border-t border-zinc-800/80 py-8 text-center text-xs font-mono text-zinc-500">
-    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="max-w-5xl mx-auto px-6 sm:pl-16 flex flex-col sm:flex-row items-center justify-between gap-4">
       <span>&copy; 2026 Dirir A. Ibrahim. Built for imdirir.com</span>
       <div class="flex items-center space-x-1">
         <button type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-2 rounded-md hover:bg-zinc-900 hover:text-zinc-300 transition-colors" aria-label="Back to top">
@@ -494,88 +450,123 @@
   </footer>
 
   <script>
-    // Initialize Lucide icons (guarded so a blocked/slow CDN never breaks the
-    // rest of this script — menu, filters, and copy-to-clipboard must keep working)
+    // Initialize Lucide icons (guarded so a blocked/slow CDN never breaks the rest of this script)
     try {
       if (window.lucide) lucide.createIcons();
     } catch (err) {
       console.warn('Lucide icons failed to initialize:', err);
     }
 
-    // Mobile menu toggle
+    // Vertical side-nav: highlight whichever section is currently in view.
+    // Also keeps the top bar's section label in sync.
     (function () {
-      const menuBtn = document.getElementById('menu-toggle');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const menuIcon = document.getElementById('menu-icon');
-      const closeIcon = document.getElementById('close-icon');
+      const sectionIds = ['home', 'about', 'experience', 'projects'];
+      const sectionLabels = { home: 'Home', about: 'About', experience: 'Experience', projects: 'Projects' };
+      const links = document.querySelectorAll('.side-nav-link');
+      const topBarSection = document.getElementById('top-bar-section');
+      const linkBySection = {};
+      links.forEach((link) => {
+        linkBySection[link.getAttribute('data-section')] = link;
+      });
 
-      if (!menuBtn || !mobileMenu) return;
-
-      function closeMenu() {
-        mobileMenu.classList.add('hidden');
-        menuBtn.setAttribute('aria-expanded', 'false');
-        menuIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
+      function setActive(id) {
+        links.forEach((link) => {
+          const isActive = link.getAttribute('data-section') === id;
+          const dot = link.querySelector('.side-nav-dot');
+          const label = link.querySelector('.side-nav-label');
+          if (dot) {
+            dot.classList.toggle('bg-blue-500', isActive);
+            dot.classList.toggle('scale-125', isActive);
+            dot.classList.toggle('bg-zinc-600', !isActive);
+          }
+          if (label) {
+            label.classList.toggle('text-zinc-100', isActive);
+            label.classList.toggle('font-medium', isActive);
+            label.classList.toggle('text-zinc-600', !isActive);
+          }
+        });
+        if (topBarSection && sectionLabels[id]) {
+          topBarSection.textContent = sectionLabels[id];
+        }
       }
 
-      menuBtn.addEventListener('click', () => {
-        const isOpen = !mobileMenu.classList.contains('hidden');
-        if (isOpen) {
-          closeMenu();
-        } else {
-          mobileMenu.classList.remove('hidden');
-          menuBtn.setAttribute('aria-expanded', 'true');
-          menuIcon.classList.add('hidden');
-          closeIcon.classList.remove('hidden');
-        }
-      });
+      setActive('home');
 
-      mobileMenu.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', closeMenu);
-      });
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                setActive(entry.target.id);
+              }
+            });
+          },
+          { rootMargin: '-45% 0px -45% 0px', threshold: 0 }
+        );
+
+        sectionIds.forEach((id) => {
+          const el = document.getElementById(id);
+          if (el) observer.observe(el);
+        });
+      }
     })();
 
-    // Clipboard copy handler (with fallback for browsers/contexts without the async Clipboard API)
-    let toastTimeout;
-    function showToast(message) {
-      const toast = document.getElementById('toast');
-      const toastMessage = document.getElementById('toast-message');
-      if (!toast) return;
-      toastMessage.textContent = message;
-      clearTimeout(toastTimeout);
-      toast.classList.remove('translate-y-16', 'opacity-0');
-      toastTimeout = setTimeout(() => {
-        toast.classList.add('translate-y-16', 'opacity-0');
-      }, 2500);
-    }
+    // Side-nav idle fade: visible while scrolling or while focused/hovered,
+    // fades out a couple seconds after the user stops.
+    (function () {
+      const nav = document.getElementById('side-nav');
+      if (!nav) return;
 
-    function copyEmail(email) {
-      const fallbackCopy = () => {
-        try {
-          const textarea = document.createElement('textarea');
-          textarea.value = email;
-          textarea.style.position = 'fixed';
-          textarea.style.opacity = '0';
-          document.body.appendChild(textarea);
-          textarea.focus();
-          textarea.select();
-          document.execCommand('copy');
-          document.body.removeChild(textarea);
-          showToast('Email copied to clipboard!');
-        } catch (err) {
-          showToast('Copy failed — email is ' + email);
-        }
-      };
+      const HIDE_DELAY = 1800;
+      let hideTimer;
+      let interacting = false;
 
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(email).then(
-          () => showToast('Email copied to clipboard!'),
-          fallbackCopy
-        );
-      } else {
-        fallbackCopy();
+      function show() {
+        nav.classList.remove('opacity-0', 'pointer-events-none');
+        nav.classList.add('opacity-100');
       }
-    }
+
+      function scheduleHide() {
+        clearTimeout(hideTimer);
+        hideTimer = setTimeout(() => {
+          if (!interacting) {
+            nav.classList.remove('opacity-100');
+            nav.classList.add('opacity-0', 'pointer-events-none');
+          }
+        }, HIDE_DELAY);
+      }
+
+      window.addEventListener(
+        'scroll',
+        () => {
+          show();
+          scheduleHide();
+        },
+        { passive: true }
+      );
+
+      nav.addEventListener('mouseenter', () => {
+        interacting = true;
+        clearTimeout(hideTimer);
+        show();
+      });
+      nav.addEventListener('mouseleave', () => {
+        interacting = false;
+        scheduleHide();
+      });
+      nav.addEventListener('focusin', () => {
+        interacting = true;
+        clearTimeout(hideTimer);
+        show();
+      });
+      nav.addEventListener('focusout', () => {
+        interacting = false;
+        scheduleHide();
+      });
+
+      show();
+      scheduleHide();
+    })();
   </script>
 </body>
 </html>
