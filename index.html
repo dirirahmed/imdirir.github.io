@@ -35,7 +35,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@1"></script>
 
   <script>
     if (window.tailwind) tailwind.config = {
@@ -215,11 +215,13 @@
             <span class="text-xs font-mono text-zinc-500 sm:w-36 shrink-0">Backend &amp; Systems</span>
             <div class="flex flex-wrap gap-1.5 font-mono text-xs text-zinc-400">
               <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">FastAPI</span>
+              <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">React</span>
               <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">Node.js</span>
               <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">REST APIs</span>
               <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">AWS</span>
               <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">Linux / Unix</span>
               <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">Git</span>
+              <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">JUnit</span>
             </div>
           </div>
           <div class="flex flex-col sm:flex-row sm:items-baseline gap-1.5 sm:gap-4">
@@ -227,6 +229,7 @@
             <div class="flex flex-wrap gap-1.5 font-mono text-xs text-zinc-400">
               <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">PostgreSQL</span>
               <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">MySQL</span>
+              <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">SQLite</span>
               <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">Schema Architecture</span>
               <span class="px-2 py-0.5 rounded-md bg-zinc-800/60 border border-zinc-700/50">ACID Transactions</span>
             </div>
@@ -266,8 +269,8 @@
             <p class="text-xs font-mono text-blue-400">Sep 2026 – Present</p>
             <p class="text-sm text-zinc-500 font-mono">Senate of Canada · Ottawa, Ontario</p>
             <ul class="text-sm text-zinc-400 leading-relaxed space-y-1.5 list-disc list-outside pl-5">
-              <li>Developed and executed Java-based JUnit unit and functional tests to validate software functionality and ensure application reliability.</li>
-              <li>Designed and executed test cases and scenarios based on business and technical requirements to verify software enhancements.</li>
+              <li>Developed and executed Java-based JUnit unit and functional tests to validate software functionality, identify defects, and ensure application reliability.</li>
+              <li>Designed and executed test cases and scenarios based on business and technical requirements to verify software enhancements and system behavior.</li>
               <li>Conducted User Acceptance Testing (UAT), documenting results and defects, and validated enhancements against business requirements.</li>
             </ul>
           </div>
@@ -285,9 +288,9 @@
             <p class="text-xs font-mono text-zinc-500">May 2026 – Aug 2026</p>
             <p class="text-sm text-zinc-500 font-mono">Senate of Canada · Ottawa, Ontario</p>
             <ul class="text-sm text-zinc-400 leading-relaxed space-y-1.5 list-disc list-outside pl-5">
-              <li>Analyzed, validated, and organized operational datasets in Excel, ensuring data accuracy and reliability for reporting.</li>
-              <li>Developed Power BI dashboards and KPI reports that transformed transportation data into actionable insights.</li>
-              <li>Utilized SQL queries to extract, filter, and validate operational data, supporting reporting and business analysis.</li>
+              <li>Analyzed, validated, and organized operational datasets using Excel and SQL queries, ensuring data accuracy and reliability across reporting pipelines.</li>
+              <li>Developed Power BI dashboards and KPI reports that transformed transportation data into actionable insights, improving operational visibility for stakeholders.</li>
+              <li>Prepared briefing notes and presented analytical findings and recommendations at the director level, supporting strategic and operational decision-making.</li>
             </ul>
           </div>
         </li>
@@ -331,20 +334,20 @@
             <div class="flex items-center justify-between gap-3">
               <span class="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400 font-medium">Go / Networking</span>
               <a href="https://github.com/dirirahmed/Net-Pulse" target="_blank" rel="noopener noreferrer" class="text-zinc-500 group-hover:text-zinc-200 transition-colors" aria-label="View Net-Pulse source on GitHub (opens in a new tab)">
-                <i data-lucide="github" class="w-4 h-4"></i>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
               </a>
             </div>
             <h3 class="text-lg sm:text-xl font-semibold text-zinc-100">Net-Pulse</h3>
             <p class="text-sm text-zinc-400 leading-relaxed flex-1">
-              A concurrent Go network scanner that probes DNS, TCP, ports, TLS, and HTTP through a bounded worker pool, backed by full unit, benchmark, and race-detection coverage.
+              A Go diagnostics engine that checks whether a host's services actually work: DNS, ports, TCP, verified TLS, and HTTP, through a bounded worker pool. Untrusted targets are re-checked at connect time to block DNS rebinding.
             </p>
             <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-zinc-400 pt-2">
               <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">Go</span>
               <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">Concurrency</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">CI / Testing</span>
+              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">Security</span>
             </div>
             <a href="https://github.com/dirirahmed/Net-Pulse" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-zinc-500 hover:text-blue-400 transition-colors">
-              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
               View on GitHub
             </a>
           </div>
@@ -370,21 +373,21 @@
             <div class="flex items-center justify-between gap-3">
               <span class="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400 font-medium">Python / AWS Security</span>
               <a href="https://github.com/dirirahmed/CloudSentry" target="_blank" rel="noopener noreferrer" class="text-zinc-500 group-hover:text-zinc-200 transition-colors" aria-label="View CloudSentry source on GitHub (opens in a new tab)">
-                <i data-lucide="github" class="w-4 h-4"></i>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
               </a>
             </div>
             <h3 class="text-lg sm:text-xl font-semibold text-zinc-100">CloudSentry</h3>
             <p class="text-sm text-zinc-400 leading-relaxed flex-1">
-              A read-only AWS security scanner that checks IAM, S3, EC2, and CloudTrail for misconfigurations, with Bedrock AI explaining the most severe findings in plain English.
+              A read-only AWS security scanner where 12 deterministic checks decide every finding and Bedrock AI only explains it. React dashboard, 100+ tests in CI, deployed on EC2 with zero open inbound ports.
             </p>
             <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-zinc-400 pt-2">
               <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">Python</span>
               <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">FastAPI</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">AWS</span>
+              <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">React</span>
               <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">Bedrock AI</span>
             </div>
             <a href="https://github.com/dirirahmed/CloudSentry" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-zinc-500 hover:text-blue-400 transition-colors">
-              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
               View on GitHub
             </a>
           </div>
@@ -410,12 +413,12 @@
             <div class="flex items-center justify-between gap-3">
               <span class="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400 font-medium">Go / Systems</span>
               <a href="https://github.com/dirirahmed/PC-Sentinel" target="_blank" rel="noopener noreferrer" class="text-zinc-500 group-hover:text-zinc-200 transition-colors" aria-label="View PC Sentinel source on GitHub (opens in a new tab)">
-                <i data-lucide="github" class="w-4 h-4"></i>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
               </a>
             </div>
             <h3 class="text-lg sm:text-xl font-semibold text-zinc-100">PC Sentinel</h3>
             <p class="text-sm text-zinc-400 leading-relaxed flex-1">
-              A Windows system monitoring dashboard built with Go and React/TypeScript, tracking CPU, memory, GPU, disk, and network in real time with local SQLite storage and optional AI-assisted analysis.
+              A Windows system monitor shipped as one Go binary with an embedded React dashboard. Transparent health scoring, alerts with hysteresis so they don't spam, and an optional AI assistant grounded in measured data.
             </p>
             <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-zinc-400 pt-2">
               <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">Go</span>
@@ -424,7 +427,7 @@
               <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">SQLite</span>
             </div>
             <a href="https://github.com/dirirahmed/PC-Sentinel" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-zinc-500 hover:text-blue-400 transition-colors">
-              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
               View on GitHub
             </a>
           </div>
@@ -450,12 +453,12 @@
             <div class="flex items-center justify-between gap-3">
               <span class="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400 font-medium">Databases / Full-Stack</span>
               <a href="https://github.com/dirirahmed/csi2532" target="_blank" rel="noopener noreferrer" class="text-zinc-500 group-hover:text-zinc-200 transition-colors" aria-label="View eHotels Reservation Platform source on GitHub (opens in a new tab)">
-                <i data-lucide="github" class="w-4 h-4"></i>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
               </a>
             </div>
             <h3 class="text-lg sm:text-xl font-semibold text-zinc-100">eHotels Reservation Platform</h3>
             <p class="text-sm text-zinc-400 leading-relaxed flex-1">
-              A hotel reservation database built with MySQL, using constraints, triggers, and nested relational queries, with a Node.js and Express API layer on top.
+              A multi-chain hotel booking system on a 7-table MySQL schema with triggers, views, and indexes, plus an Express app for customer bookings, employee check-ins, and admin tools.
             </p>
             <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-zinc-400 pt-2">
               <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">MySQL</span>
@@ -463,7 +466,7 @@
               <span class="px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700/50">Express</span>
             </div>
             <a href="https://github.com/dirirahmed/csi2532" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-zinc-500 hover:text-blue-400 transition-colors">
-              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
               View on GitHub
             </a>
           </div>
@@ -487,10 +490,10 @@
           <i data-lucide="file-text" class="w-4 h-4"></i>
         </a>
         <a href="https://github.com/dirirahmed" target="_blank" rel="noopener noreferrer" class="p-2 rounded-md hover:bg-zinc-900 hover:text-zinc-300 transition-colors" aria-label="GitHub profile (opens in a new tab)">
-          <i data-lucide="github" class="w-4 h-4"></i>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
         </a>
         <a href="https://www.linkedin.com/in/dirir-a-ibrahim-a37032306/" target="_blank" rel="noopener noreferrer" class="p-2 rounded-md hover:bg-zinc-900 hover:text-zinc-300 transition-colors" aria-label="LinkedIn profile (opens in a new tab)">
-          <i data-lucide="linkedin" class="w-4 h-4"></i>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.869 1.637-1.788 3.37-1.788 3.601 0 4.267 2.37 4.267 5.455v6.284zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </a>
         <a href="mailto:dirir.ahmedd@gmail.com" class="p-2 rounded-md hover:bg-zinc-900 hover:text-zinc-300 transition-colors" aria-label="Send an email to dirir.ahmedd@gmail.com">
           <i data-lucide="mail" class="w-4 h-4"></i>
