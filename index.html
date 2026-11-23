@@ -157,17 +157,13 @@
 
           <!-- Picture window -->
           <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div class="relative aspect-[4/5] w-full max-w-xs sm:max-w-sm rounded-2xl border border-zinc-800 bg-gradient-to-br from-zinc-900 via-zinc-900 to-blue-950/20 overflow-hidden">
-              <div class="absolute inset-0" style="background-image: radial-gradient(circle, #3f3f46 1px, transparent 1px); background-size: 20px 20px; opacity: 0.25;" aria-hidden="true"></div>
-              <div class="absolute -top-12 -right-12 w-48 h-48 bg-blue-500/20 blur-3xl rounded-full" aria-hidden="true"></div>
-              <div class="absolute inset-0 flex flex-col items-center justify-center gap-4 text-center px-6">
-                <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border border-zinc-700 bg-zinc-900/80 flex items-center justify-center">
-                  <span class="font-mono text-3xl sm:text-4xl font-semibold text-zinc-200">DI</span>
-                </div>
-                <p class="text-xs font-mono text-zinc-600 tracking-wide">Photo coming soon</p>
+            <div class="relative w-full max-w-xs sm:max-w-sm">
+              <div class="absolute -top-10 -right-10 w-48 h-48 bg-blue-500/20 blur-3xl rounded-full" aria-hidden="true"></div>
+              <div class="relative aspect-[4/5] rounded-2xl border border-zinc-800 overflow-hidden shadow-[0_0_60px_-24px_rgba(59,130,246,0.45)]">
+                <img src="./dirir.jpg" alt="Dirir Ibrahim" width="800" height="1000" class="w-full h-full object-cover object-top" fetchpriority="high">
               </div>
-              <span class="absolute top-4 left-4 w-6 h-6 border-t border-l border-zinc-700/80" aria-hidden="true"></span>
-              <span class="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-zinc-700/80" aria-hidden="true"></span>
+              <span class="absolute -top-3 -left-3 w-6 h-6 border-t border-l border-zinc-700/80" aria-hidden="true"></span>
+              <span class="absolute -bottom-3 -right-3 w-6 h-6 border-b border-r border-zinc-700/80" aria-hidden="true"></span>
             </div>
           </div>
 
@@ -175,7 +171,7 @@
       </div>
 
       <!-- Scroll cue -->
-      <button type="button" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})" aria-label="Scroll to About" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-zinc-500 hover:text-zinc-300 transition-colors">
+      <button type="button" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})" aria-label="Scroll to About" class="absolute bottom-6 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 text-zinc-500 hover:text-zinc-300 transition-colors">
         <span class="text-[10px] font-mono tracking-[0.2em] uppercase">Scroll</span>
         <span class="w-9 h-9 rounded-full border border-zinc-800 flex items-center justify-center animate-bounce">
           <i data-lucide="chevron-down" class="w-4 h-4"></i>
@@ -191,10 +187,15 @@
         <h2 class="text-2xl font-semibold tracking-tight text-zinc-100">About</h2>
       </div>
 
-      <!-- Personal intro — a first draft, to be refined together in Dirir's own voice -->
-      <p class="text-base sm:text-lg text-zinc-300 leading-relaxed max-w-2xl">
-        I'm a Computer Science student at the University of Ottawa who genuinely enjoys solving hard problems; the kind where you're stuck for a while and then it just clicks. Outside of that, you'll probably find me playing or watching basketball and soccer, checking sports stats way more than I should, or losing track of time in Rocket League.
-      </p>
+      <!-- Personal intro, in Dirir's own voice -->
+      <div class="space-y-4 text-base sm:text-lg text-zinc-300 leading-relaxed max-w-2xl">
+        <p>
+          I'm a CS student at uOttawa. I like building things people actually use, and I like the problems where I'm stuck for a while before it finally clicks.
+        </p>
+        <p>
+          When I'm not coding, I'm usually playing or watching basketball and soccer, or nerding out over sports stats. That's pretty much how PitchSense started.
+        </p>
+      </div>
 
       <!-- Education -->
       <div class="rounded-xl border border-zinc-800/80 bg-zinc-900/30 p-5 sm:p-6 space-y-3">
@@ -328,7 +329,7 @@
     <section id="projects" class="space-y-8 scroll-mt-24">
       <div class="space-y-1">
         <h2 class="text-2xl font-semibold tracking-tight text-zinc-100">Projects</h2>
-        <p class="text-sm text-zinc-400">A few things I've built, learned, and broken... along the way.</p>
+        <p class="text-sm text-zinc-400">Things I've built, in class and on my own time.</p>
       </div>
 
       <!--
